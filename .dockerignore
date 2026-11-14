@@ -1,0 +1,17 @@
+.git
+.github
+venv
+.venv
+data
+notebooks
+reports
+screenshots
+tests
+mlruns
+mlartifacts
+mlflow.db
+models/candidates
+**/__pycache__
+*.pyc
+.pytest_cache
+.coverage
