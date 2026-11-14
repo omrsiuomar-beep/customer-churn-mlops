@@ -171,3 +171,15 @@ Jupyter), copies just the API code and the model, runs as a non-root user and ha
   drift on contract mix and monthly charges.
 - LIME shows the scaled values (e.g. tenure ≤ −0.96 means a very new customer), which is less
   readable than the raw numbers.
+
+## Screenshots
+
+| | |
+|---|---|
+| MLflow runs (parent + grid-search child runs) | ![](screenshots/01_mlflow_runs_and_grid_search.png) |
+| MLflow model comparison | ![](screenshots/02_mlflow_model_comparison.png) |
+| XGBoost run metrics and params | ![](screenshots/03_mlflow_xgboost_metrics.png) |
+| SHAP plot stored in MLflow | ![](screenshots/04_mlflow_shap_artifact.png) |
+| FastAPI docs | ![](screenshots/05_fastapi_docs.png) |
+| `/predict` response | ![](screenshots/06_fastapi_predict_response.png) |
+| pytest, 16 passed | ![](screenshots/07_pytest_16_passed.png) |
