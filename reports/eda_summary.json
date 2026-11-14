@@ -1,0 +1,60 @@
+{
+  "rows": 7043,
+  "blank_total_charges": 11,
+  "duplicates": 22,
+  "churn_rate": 0.2654,
+  "churn_rate_by_contract": {
+    "Two year": 0.0283,
+    "One year": 0.1127,
+    "Month-to-month": 0.4271
+  },
+  "churn_rate_by_internet": {
+    "No": 0.074,
+    "DSL": 0.1896,
+    "Fiber optic": 0.4189
+  },
+  "churn_rate_by_payment": {
+    "Credit card (automatic)": 0.1524,
+    "Bank transfer (automatic)": 0.1671,
+    "Mailed check": 0.1911,
+    "Electronic check": 0.4529
+  },
+  "churn_rate_by_tenure_group": {
+    "0-6": 0.5294,
+    "7-12": 0.3589,
+    "13-24": 0.2871,
+    "25-36": 0.2163,
+    "37-48": 0.1903,
+    "49-60": 0.1442,
+    "61-72": 0.0661
+  },
+  "median_by_churn": {
+    "tenure": {
+      "No": 38.0,
+      "Yes": 10.0
+    },
+    "MonthlyCharges": {
+      "No": 64.43,
+      "Yes": 79.65
+    },
+    "TotalCharges": {
+      "No": 1679.52,
+      "Yes": 703.55
+    }
+  },
+  "correlation_with_churn": {
+    "tenure": -0.352,
+    "Contract_Two year": -0.302,
+    "InternetService_No": -0.228,
+    "TotalCharges": -0.198,
+    "Contract_One year": -0.178,
+    "PaymentMethod_Credit card (automatic)": -0.134,
+    "InternetService_DSL": -0.124,
+    "PaymentMethod_Bank transfer (automatic)": -0.118,
+    "PaymentMethod_Mailed check": -0.092,
+    "MonthlyCharges": 0.193,
+    "PaymentMethod_Electronic check": 0.302,
+    "InternetService_Fiber optic": 0.308,
+    "Contract_Month-to-month": 0.405
+  }
+}

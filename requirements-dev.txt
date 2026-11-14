@@ -1,9 +1,9 @@
 -r requirements.txt
 mlflow==3.18.0
 matplotlib==3.11.2
-seaborn
-shap
-lime
+seaborn==0.13.2
+shap==0.54.1
+lime==0.2.0.1
 pytest==9.2.0
 pytest-cov==7.1.0
 httpx==0.28.1
