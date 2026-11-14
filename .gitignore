@@ -1,0 +1,17 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+mlruns/
+mlartifacts/
+mlflow.db
+data/*.csv
+models/candidates/
+.vscode/
+.idea/
+.env
+Thumbs.db
+.DS_Store
