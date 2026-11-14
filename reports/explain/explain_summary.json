@@ -1,0 +1,92 @@
+{
+  "explained_model": "XGBoost",
+  "xgboost_importance_top10": {
+    "Contract_Month-to-month": 0.4738999903202057,
+    "InternetService_Fiber optic": 0.0851999968290329,
+    "OnlineSecurity_No": 0.06949999928474426,
+    "TechSupport_No": 0.05660000070929527,
+    "PaymentMethod_Electronic check": 0.034699998795986176,
+    "Contract_Two year": 0.02669999934732914,
+    "StreamingMovies_Yes": 0.020600000396370888,
+    "tenure": 0.01979999989271164,
+    "Contract_One year": 0.01899999938905239,
+    "StreamingTV_Yes": 0.01549999974668026
+  },
+  "shap_mean_abs_top10": {
+    "Contract_Month-to-month": 0.7057999968528748,
+    "tenure": 0.3977000117301941,
+    "MonthlyCharges": 0.28600001335144043,
+    "InternetService_Fiber optic": 0.26809999346733093,
+    "OnlineSecurity_No": 0.21719999611377716,
+    "TotalCharges": 0.20190000534057617,
+    "PaymentMethod_Electronic check": 0.16940000653266907,
+    "PaperlessBilling_No": 0.1282999962568283,
+    "Contract_Two year": 0.12780000269412994,
+    "MultipleLines_No": 0.1256999969482422
+  },
+  "customer": {
+    "churn_probability": 0.9733,
+    "actual": 1,
+    "tenure": 1,
+    "MonthlyCharges": 100.8,
+    "TotalCharges": 100.8,
+    "gender": "Female",
+    "SeniorCitizen": "Yes",
+    "Partner": "Yes",
+    "Dependents": "No",
+    "PhoneService": "Yes",
+    "MultipleLines": "Yes",
+    "InternetService": "Fiber optic",
+    "OnlineSecurity": "No",
+    "OnlineBackup": "No",
+    "DeviceProtection": "Yes",
+    "TechSupport": "No",
+    "StreamingTV": "Yes",
+    "StreamingMovies": "Yes",
+    "Contract": "Month-to-month",
+    "PaperlessBilling": "Yes",
+    "PaymentMethod": "Electronic check"
+  },
+  "lime_top10": [
+    [
+      "0.00 < Contract_Month-to-month <= 1.00",
+      0.2681
+    ],
+    [
+      "tenure <= -0.96",
+      0.1712
+    ],
+    [
+      "MonthlyCharges > 0.83",
+      0.1316
+    ],
+    [
+      "0.00 < InternetService_Fiber optic <= 1.00",
+      0.1107
+    ],
+    [
+      "Contract_Two year <= 0.00",
+      0.0706
+    ],
+    [
+      "0.00 < OnlineSecurity_No <= 1.00",
+      0.069
+    ],
+    [
+      "MultipleLines_No <= 0.00",
+      0.0644
+    ],
+    [
+      "TotalCharges <= -0.83",
+      0.0626
+    ],
+    [
+      "0.00 < PaymentMethod_Electronic check <= 1.00",
+      0.0552
+    ],
+    [
+      "0.00 < TechSupport_No <= 1.00",
+      0.0414
+    ]
+  ]
+}
