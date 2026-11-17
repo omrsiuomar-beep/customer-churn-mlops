@@ -10,7 +10,6 @@ mlartifacts/
 mlflow.db
 data/*.csv
 models/candidates/
-.vscode/
 .idea/
 .env
 Thumbs.db

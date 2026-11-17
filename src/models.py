@@ -7,12 +7,12 @@ from xgboost import XGBClassifier
 from src.config import SEED
 from src.features import build_preprocessor
 
-# roughly 2.8 stayers for every churner, used to rebalance XGBoost
+# about 2.8 customers stay for every 1 that leaves -> used for scale_pos_weight
 NEG_POS_RATIO = 2.8
 
 
 def candidates():
-    """Model + grid for each algorithm. Grids are kept small enough to run on a laptop."""
+    # model + grid for each algorithm, small grids so it runs fast on my laptop
     return {
         "LogisticRegression": (
             LogisticRegression(max_iter=2000, random_state=SEED),

@@ -37,7 +37,7 @@ def save(name):
 
 
 def tree_importance(pipeline, X_test):
-    """Built-in importance of the tuned XGBoost model (gain based)."""
+    # xgboost's own importance (gain)
     model = pipeline.named_steps["model"]
     imp = pd.Series(model.feature_importances_, index=feature_names(pipeline)).sort_values().tail(15)
     fig, ax = plt.subplots(figsize=(8, 6))

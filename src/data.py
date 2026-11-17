@@ -12,8 +12,8 @@ def load_raw(path=DATA_PATH):
 def clean(df):
     df = df.copy()
 
-    # TotalCharges comes in as text because new customers (tenure 0) have a blank value.
-    # They haven't been billed yet, so 0 is the honest value, not the median.
+    # TotalCharges is read as text because new customers (tenure 0) have a blank space
+    # they didn't get a bill yet so 0 makes more sense than the median
     df["TotalCharges"] = pd.to_numeric(df["TotalCharges"].astype(str).str.strip(), errors="coerce")
     df.loc[df["TotalCharges"].isna() & (df["tenure"] == 0), "TotalCharges"] = 0.0
     df["TotalCharges"] = df["TotalCharges"].fillna(df["TotalCharges"].median())
@@ -31,7 +31,7 @@ def encode_target(y):
 
 
 def load_data(path=DATA_PATH):
-    # a handful of rows are exact copies once the ID is gone, they would leak across the split
+    # 22 rows are the same after dropping the ID, remove them so they don't end up in train and test
     return clean(load_raw(path)).drop_duplicates().reset_index(drop=True)
 
 
