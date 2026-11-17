@@ -55,7 +55,7 @@ def plot_confusion(y_test, proba, name, path):
 
 
 def log_grid(search):
-    """Each grid combination becomes a child run, so the tuning is visible in the MLflow UI."""
+    # log every grid combination as a child run so I can compare them in the MLflow UI
     results = pd.DataFrame(search.cv_results_)
     for _, row in results.iterrows():
         with mlflow.start_run(run_name=f"cv_rank_{int(row['rank_test_f1']):02d}", nested=True):
@@ -138,7 +138,7 @@ def main():
 
     plot_roc(curves, y_test)
 
-    # pick on cross-validation, not on the test set, so the test numbers stay honest
+    # choose using the CV score, the test set is only for the final numbers
     best = max(scores, key=lambda n: scores[n]["cv_f1"])
     pipeline = searches[best].best_estimator_
     joblib.dump(pipeline, MODEL_PATH, compress=3)
