@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Train models",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/train.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "EDA",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/eda.py",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run API",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": ["app.main:app", "--reload", "--port", "8000"],
+            "jinja": true
+        }
+    ]
+}
